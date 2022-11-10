@@ -1,0 +1,19 @@
+{
+  "name": "se_project",
+  "version": "1.0.0",
+  "description": "se project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://tejal-1303@github.com/tejal-1303/Se_Project.git"
+  },
+  "author": "tejal, swathi, pavithra, ranjith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tejal-1303/Se_Project/issues"
+  },
+  "homepage": "https://github.com/tejal-1303/Se_Project#readme"
+}
