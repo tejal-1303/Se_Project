@@ -34,3 +34,19 @@ router.get("/logout", (req, res) => {
   req.logout();
   res.send({ message: "Successfully logged out" });
 });
+
+router.post("/fetch-problems", async (req, res) => {
+  const { tags, difficulty, companies } = req.body as Record<string, string[]>;
+  res.json(await filterQuestions(tags, difficulty, companies));
+});
+
+router.post("/fetch-contest-problem", async (req, res) => {
+  const { url, hostname } = req.body as Record<string, string>;
+  const questionData = await scrapeQuestion(url, hostname);
+  res.json(questionData);
+});
+
+router.post("/get-problem", async (req, res) => {
+  const { question_id } = req.body as Record<string, string>;
+  res.json(await renderQuestion(question_id));
+});
