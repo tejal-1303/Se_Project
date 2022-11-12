@@ -7,29 +7,70 @@
 
 // const router = Router();
 
-// router.get("/auth", (req, res) => {
+// we will do our re-routing from the client side just send information from here
+// GET to /api/auth will return current logged in user info
+// router.get('/auth', (req, res) => {
 //   if (!req.user) {
 //     return res.status(200).json({
 //       isLoggedIn: false,
-//       message: "User is not logged in.",
+//       message: 'User is not logged in.',
 //       user: {
-//         name: "",
-//         image_link: "",
+//         name: '',
+//         image_link: '',
 //       },
-
+//       // cookies: undefined,
 //     });
 //   } else {
 //     return res.status(200).json({
 //       isLoggedIn: true,
-//       message: "User is logged in",
+//       message: 'User is logged in',
 //       user: req.user,
-
+//       // cookies: req.cookies,
 //     });
 //   }
 // });
 
 // // auth logout
-// router.get("/logout", (req, res) => {
+// router.get('/logout', (req, res) => {
 //   req.logout();
-//   res.send({ message: "Successfully logged out" });
+//   res.send({ message: 'Successfully logged out' });
 // });
+
+// router.post('/execute', async (req, res) => {
+//   const { script, language, stdin } = req.body;
+//   if (!language || !script) {
+//     return res.status(200).json({
+//       message: 'Code should not be empty and Language undefined',
+//     });
+//   }
+
+//   const response = await axios({
+//     method: 'POST',
+//     url: `${JDOODLE_URL}/execute`,
+//     data: {
+//       script: script,
+//       stdin: stdin,
+//       language: getLanguage[language],
+//       versionIndex: getLanguageVersion[language],
+//       clientId: JDOODLE.clientID,
+//       clientSecret: JDOODLE.clientSecret,
+//     },
+//     responseType: 'json',
+//   });
+//   res.json(response.data);
+// });
+
+// router.get('/credit-spent', async (req, res) => {
+//   const response = await axios({
+//     method: 'POST',
+//     url: `${JDOODLE_URL}/credit-spent`,
+//     data: {
+//       clientId: JDOODLE.clientID,
+//       clientSecret: JDOODLE.clientSecret,
+//     },
+//     responseType: 'json',
+//   });
+//   res.json(response.data);
+// });
+
+// export default router;
