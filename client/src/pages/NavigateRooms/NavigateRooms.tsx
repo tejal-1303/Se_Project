@@ -20,7 +20,7 @@ import styles from "./NavigateRooms.module.css";
 import generate from "project-name-generator";
 import { useSnackbar } from "notistack";
 import { useLocation } from "react-router-dom";
-import Logo from "assets/caucus-logo.png";
+import Logo from "assets/Codify-logo.png";
 
 const LightTooltip = withStyles((theme: Theme) => ({
   tooltip: {
@@ -65,7 +65,7 @@ const NavigateRoom = () => {
             <span>
               <img src={Logo} width="55x" height="55x"></img>
             </span>
-            <span className={styles.toolbarText}>Caucus</span>
+            <span className={styles.toolbarText}>Codify</span>
           </div>
           <div className={styles.avatarFlex}>
             <LightTooltip TransitionComponent={Zoom} title={user?.name || "John Doe"} placement="bottom">

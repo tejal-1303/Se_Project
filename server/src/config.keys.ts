@@ -9,3 +9,31 @@ export const port = parseInt(<string>process.env.PORT) || 5000;
 export const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:3000";
 
 export const SERVER_URL = process.env.SERVER_URL || "http://localhost:5000";
+
+export const COOKIE_KEYS = [process.env.COOKIE_KEYS || "password"];
+
+export const JDOODLE_URL = process.env.JDOODLE_URL || "https://api.jdoodle.com/v1";
+
+// check if URI is correct for you format
+// postgresql://<User>:<Passward>@<host-name>:<port-number>/<db-name>s
+export const DATABASE_URL = process.env.DATABASE_URL || "postgresql://localhost:5432/caucus_db";
+
+export const GITHUB_KEY = {
+  clientID: process.env.GITHUB_KEY_CLIENTID || " ",
+  clientSecret: process.env.GITHUB_KEY_CLIENTSECRET || " ",
+};
+
+export const GOOGLE_KEY = {
+  clientID: process.env.GOOGLE_KEY_CLIENTID || " ",
+  clientSecret: process.env.GOOGLE_KEY_CLIENTSECRET || " ",
+};
+
+export const TWITTER_KEY = {
+  consumerKey: process.env.TWITTER_KEY_CONSUMERKEY || " ",
+  consumerSecret: process.env.TWITTER_KEY_CONSUMERSECRET || " ",
+};
+
+export const JDOODLE = {
+  clientID: process.env.JDOODLE_CLIENTID || "da358ecadea106b681e17e6dd1194863",
+  clientSecret: process.env.JDOOLDE_CLIENTSECRET || "7b69d6ce85668cb6fe5dbd61d37433bf3ffe31c14fed906833faad7e2593f5ca",
+};
