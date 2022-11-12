@@ -22,6 +22,7 @@ router.get(
   })
 );
 
+//auth with github
 router.get("/github", passport.authenticate("github", { scope: ["profile"] }));
 router.get(
   "/github/redirect",
