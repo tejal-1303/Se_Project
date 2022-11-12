@@ -1,5 +1,5 @@
 -- OAuth2.0 SCHEMA
-CREATE DATABASE caucus_db;
+CREATE DATABASE codify_db;
 CREATE TABLE oauth (
   id SERIAL,
   user_id VARCHAR(255) PRIMARY KEY,
