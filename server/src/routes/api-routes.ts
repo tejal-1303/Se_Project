@@ -3,7 +3,7 @@ import axios from 'axios';
 // import { JDOODLE, JDOODLE_URL } from "../config.keys";
 // import { getLanguageVersion, getLanguage } from "../utils/getLanguageVersion";
 import { filterQuestions, renderQuestion } from '../utils/databaseQueries';
-// import { scrapeQuestion } from "../utils/scrapeQuestion";
+import { scrapeQuestion } from '../utils/scrapeQuestion';
 
 const router = Router();
 
@@ -45,6 +45,12 @@ router.post('/fetch-problems', async (req, res) => {
 router.post('/get-problem', async (req, res) => {
   const { question_id } = req.body as Record<string, string>;
   res.json(await renderQuestion(question_id));
+});
+
+router.post('/fetch-contest-problem', async (req, res) => {
+  const { url, hostname } = req.body as Record<string, string>;
+  const questionData = await scrapeQuestion(url, hostname);
+  res.json(questionData);
 });
 
 // router.post('/execute', async (req, res) => {
