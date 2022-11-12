@@ -20,7 +20,7 @@ import styles from "./NavigateRooms.module.css";
 import generate from "project-name-generator";
 import { useSnackbar } from "notistack";
 import { useLocation } from "react-router-dom";
-import Logo from "assets/Codify-logo.png";
+import Logo from "assets/codify-logo.png";
 
 const LightTooltip = withStyles((theme: Theme) => ({
   tooltip: {
