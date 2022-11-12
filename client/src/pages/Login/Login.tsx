@@ -28,12 +28,6 @@ const Login = () => {
         <Particles />
         <div className={classes["login-box"]}>
           <div className={classes["login-box-formbox"]}>
-            <div className={classes["login-box-signup"]}>
-              Want to know how I made this?{" "}
-              <a href="" onClick={(e) => e.preventDefault()}>
-                Read the Blog
-              </a>
-            </div>
             <div className={classes["login-box-login"]}>
               <h1>Welcome to Codify</h1>
               <p>
