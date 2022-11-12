@@ -35,7 +35,7 @@ const Login = () => {
               </a>
             </div>
             <div className={classes["login-box-login"]}>
-              <h1>Welcome to Caucus</h1>
+              <h1>Welcome to Codify</h1>
               <p>
                 <i>A real Time collaborative editor with embeded compiler</i>
               </p>
