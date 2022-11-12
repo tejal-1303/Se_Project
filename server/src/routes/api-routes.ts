@@ -53,41 +53,41 @@ router.post('/fetch-contest-problem', async (req, res) => {
   res.json(questionData);
 });
 
-// router.post('/execute', async (req, res) => {
-//   const { script, language, stdin } = req.body;
-//   if (!language || !script) {
-//     return res.status(200).json({
-//       message: 'Code should not be empty and Language undefined',
-//     });
-//   }
+router.post('/execute', async (req, res) => {
+  const { script, language, stdin } = req.body;
+  if (!language || !script) {
+    return res.status(200).json({
+      message: 'Code should not be empty and Language undefined',
+    });
+  }
 
-//   const response = await axios({
-//     method: 'POST',
-//     url: `${JDOODLE_URL}/execute`,
-//     data: {
-//       script: script,
-//       stdin: stdin,
-//       language: getLanguage[language],
-//       versionIndex: getLanguageVersion[language],
-//       clientId: JDOODLE.clientID,
-//       clientSecret: JDOODLE.clientSecret,
-//     },
-//     responseType: 'json',
-//   });
-//   res.json(response.data);
-// });
+  const response = await axios({
+    method: 'POST',
+    url: `${JDOODLE_URL}/execute`,
+    data: {
+      script: script,
+      stdin: stdin,
+      language: getLanguage[language],
+      versionIndex: getLanguageVersion[language],
+      clientId: JDOODLE.clientID,
+      clientSecret: JDOODLE.clientSecret,
+    },
+    responseType: 'json',
+  });
+  res.json(response.data);
+});
 
-// router.get('/credit-spent', async (req, res) => {
-//   const response = await axios({
-//     method: 'POST',
-//     url: `${JDOODLE_URL}/credit-spent`,
-//     data: {
-//       clientId: JDOODLE.clientID,
-//       clientSecret: JDOODLE.clientSecret,
-//     },
-//     responseType: 'json',
-//   });
-//   res.json(response.data);
-// });
+router.get('/credit-spent', async (req, res) => {
+  const response = await axios({
+    method: 'POST',
+    url: `${JDOODLE_URL}/credit-spent`,
+    data: {
+      clientId: JDOODLE.clientID,
+      clientSecret: JDOODLE.clientSecret,
+    },
+    responseType: 'json',
+  });
+  res.json(response.data);
+});
 
 export default router;
