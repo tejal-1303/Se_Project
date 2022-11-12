@@ -7,16 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 import styles from './ChatMessage-styles';
 
-// interface AppProps {
-//   classes?: any
-//   avatar: string;
-//   messages: string[];
-//   side: 'left' | 'right';
-//   GridContainerProps: Record<string, unknown>;
-//   GridItemProps: Record<string, unknown>;
-//   AvatarProps: Record<string, unknown>;
-//   getTypographyProps?: Function;
-// }
 
 const ChatMsg = withStyles(styles, { name: 'ChatMsg' })((props) => {
   const {
