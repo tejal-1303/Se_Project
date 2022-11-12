@@ -14,7 +14,7 @@ At the same time, changes in the code are handled adequately so that users canno
 - [Material UI](https://material-ui.com/getting-started/installation/)
 - [yjs](https://yjs.dev/)
 
-Written in TypeScript ♥
+Written in TypeScript
 
 ## Getting Started
 
