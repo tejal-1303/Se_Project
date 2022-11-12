@@ -78,7 +78,6 @@ export interface StateInterface {
   };
 }
 
-// SS -> short 😜
 export interface UserInfoSS {
   name: string;
   image_link: string;
