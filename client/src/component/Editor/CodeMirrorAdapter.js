@@ -21,14 +21,11 @@ const typeObserver = (binding, event) => {
   binding._mux(() => {
     const cmDoc = binding.cmDoc;
     const cm = cmDoc.getEditor();
-    // Normally the position is right-associated
-    // But when remote changes happen, it looks like the remote user is hijacking your position.
-    // Just for remote insertions, we make the collapsed cursor left-associated.
-    // If selection is not collapsed, we only make "to" left associated
+    
     let anchor = cm.indexFromPos(cm.getCursor("anchor"));
     let head = cm.indexFromPos(cm.getCursor("head"));
     const switchSel = head < anchor;
-    // normalize selection so that anchor < head, switch back later
+   
     if (switchSel) {
       const tmp = head;
       head = anchor;
@@ -64,7 +61,7 @@ const typeObserver = (binding, event) => {
         }
       }
     };
-    // if possible, bundle the changes using cm.operation
+   
     if (cm) {
       cm.operation(performChange);
     } else {
