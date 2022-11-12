@@ -1,6 +1,3 @@
-//@ts-nocheck
-/* eslint-disable no-use-before-define */
-// please dont expect me to re-write css for this mess X-X
 import React from "react";
 import { useTheme, fade, makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Popper from "@material-ui/core/Popper";
