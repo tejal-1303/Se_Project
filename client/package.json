@@ -1,0 +1,59 @@
+{
+  "name": "caucus-client",
+  "description": "Realtime Collaborate Editor with embedded Compiler",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://tejal-1303@github.com/tejal-1303/Se_Project.git"
+  },
+  "author": "tejal, swathi, pavithra, ranjith",
+  "bugs": "https://github.com/rishabh-malhotraa/caucus/issues",
+  "type": "module",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@mui-treasury/components": "^1.10.1",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+    "lint": "eslint src/**/*.ts src/**/*.tsx",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.18.0",
+    "eslint-plugin-react": "^7.22.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1"
+  }
+}
